@@ -61,6 +61,14 @@ By taking these steps, we make our data more usable to answer our question.
 
 <iframe src="assets/univariate_plot1.html" width=800 height=600 frameBorder=0></iframe>
 
+For our univariate analysis, we chose to plot the distribution of the number 
+of tags per recipe by creating a box-and-whisker plot. We discovered the number
+of tags per recipe were usually between 11 (the first quartile) and 21 (the 
+third quartile). The median, 16, is a measure of central tendency that is not
+strongly affected by outliers. Since the mean, about 16.29, is pretty close to
+16, we can say that the distribution of tags is approximately symmetric. This
+means that approximately half of our distribution has a number of tags that is
+less than 16 and half has a number of tags that is greater than 16. 
 <iframe src="assets/univariate_plot2.html" width=800 height=600 frameBorder=0></iframe>
 
 ### Bivariate Analysis
