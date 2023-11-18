@@ -68,21 +68,11 @@ recipes more often when the dish has a review(s) and a high rating.
 
 #### NMAR Analysis
 
-We believe the reviews column could be not missing at random (NMAR) if people
-chose not to leave a review. This could be due to:
+We believe the reviews column could be not missing at random (NMAR) if people chose not to leave a review. This could be due to:
 
-- **lack of time:** People may not have the time to write a review; additional
-  columns we could study to investigate the lack of time include number of
-  hours worked a day, spent at school, or spent in extracurriculars.
-- **assumed unimportance:** People may not consider leaving a review to be
-  important. Additional information we could gather is how people would
-  rate the importance of answering surveys, but this information is also
-  pretty useless, considering people who do not want to take the time to
-  leave a review probably also would not take the time to answer an extra question.
-- **privacy concerns:** People may have privacy concerns and may not feel comfortable
-  sharing their thoughts online. Similar to the last bullet point, we could
-  obtain information where people rank how much they value privacy, but those
-  who care a lot about privacy may just avoid the question.
+- **lack of time:** People may not have the time to write a review; additional columns we could study to investigate the lack of time include number of hours worked a day, spent at school, or spent in extracurriculars.
+- **assumed unimportance:** People may not consider leaving a review to be important. Additional information we could gather is how people would rate the importance of answering surveys, but this information is also pretty useless, considering people who do not want to take the time to leave a review probably also would not take the time to answer an extra question.
+- **privacy concerns:** People may have privacy concerns and may not feel comfortable sharing their thoughts online. Similar to the last bullet point, we could obtain information where people rank how much they value privacy, but those who care a lot about privacy may just avoid the question.
 
 #### Missingness Dependency
 
@@ -95,19 +85,12 @@ distribution mentioned.
 
 <iframe src="assets/missing_depend_tag.html" width=600 height=450 frameBorder=0></iframe>
 
-We used a KS statistic since the shape of the
-distribution when the reviews are vs. are not missing are notably different.
-When the reviews are missing, the distribution is fairly uniform, whereas
-when the reviews are not missing, the distribution appears generally normal.
+We used a KS statistic since the shape of the distribution when the reviews are vs. are not missing are notably different. When the reviews are missing, the distribution is fairly uniform, whereas when the reviews are not missing, the distribution appears generally normal.
 
-Since our p-value is **0.245** > 0.05 (our significance level threshold), we
-fail to reject the null hypothesis, so the missingness of our data is
-**missing completely at random (MCAR)**. The missingness of the reviews has _no
-correlation_ with the distribution of tag counts per recipe.
+Since our p-value is **0.245** > 0.05 (our significance level threshold), we fail to reject the null hypothesis, so the missingness of our data is
+**missing completely at random (MCAR)**. The missingness of the reviews has _no correlation_ with the distribution of tag counts per recipe.
 
-We want to determine if there's a column that _does_ affect the missingness
-of the reviews. We decided to investigate whether the missingness of the reviews
-depends on the number of steps in a recipe.
+We want to determine if there's a column that _does_ affect the missingness of the reviews. We decided to investigate whether the missingness of the reviews depends on the number of steps in a recipe.
 
 Our new null hypothesis is that the distribution of the number of steps per
 recipe is the same whether or not the reviews are missing. Our alternative
@@ -118,17 +101,6 @@ reviews per recipe for each distribution mentioned.
 
 <iframe src="assets/missing_depend_nstep.html" width=600 height=450 frameBorder=0></iframe>
 
-We used a KS statistic
-since the shape of the distribution when the reviews are vs. are not
-missing are notably different. When the reviews are missing, the
-distribution is fairly uniform, whereas when the reviews are not missing,
-the distribution appears generally normal.
+We used a KS statistic since the shape of the distribution when the reviews are vs. are not missing are notably different. When the reviews are missing, the distribution is fairly uniform, whereas when the reviews are not missing, the distribution appears generally normal.
 
-Since our p-value is **0.02** <
-0.05 (our significance level threshold), we reject the null hypothesis,
-so the missingness of our data is **missing at random (MAR)**. The missingness
-of the reviews depends on the n-steps. A plausible explanation for this is
-that the reviews are more likely to be missing when there are more steps
-in a recipe, less people are likely to follow the recipe since the dish
-will take more time to make and read, causing less people to ultimately
-leave a review.
+Since our p-value is **0.02** < 0.05 (our significance level threshold), we reject the null hypothesis, so the missingness of our data is **missing at random (MAR)**. The missingness of the reviews depends on the n-steps. A plausible explanation for this is that the reviews are more likely to be missing when there are more steps in a recipe, less people are likely to follow the recipe since the dish will take more time to make and read, causing less people to ultimately leave a review.
