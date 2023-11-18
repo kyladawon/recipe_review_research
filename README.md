@@ -25,6 +25,10 @@ This question intrigues us because in order for businesses to do well, they need
 
 ### Data Cleaning
 
+```py
+print(final_merged.head().to_markdown(index=False))
+```
+
 For the data cleaning, we performed a left merge between the 'interactions' and 'recipes' DataFrame. Then, we filled in all zeroes in the 'Rating' column with np.NaN since it does not make sense for a recipe to receive a rating of 0; in this context, ratings can only be on a scale from 1 to 5. Therefore, a recipe receiving a rating of 0 probably just means that a rating was not received for that particular recipe.
 
 Next, we considered what columns to add for our DataFrame. Since we are inspecting
@@ -61,9 +65,7 @@ We also created different scatter plot with the number of steps on x-axis and th
 
 We decided to take a closer look at which columns impact the missingness of reviews in the "reviews" column by creating a pivot table, where we grouped the data by the rating (from 1 to 5) and set the values to be the sum of the tag_count per recipe.
 
-```python
 print(intesting_agg_pivot_table.to_markdown(index=False))
-```
 
 It seems as though recipes with a higher rating generally have more tags, whether a review is missing or not. However, we also noticed that recipes where the reviews were not missing also had significantly more tags than recipes with missing reviews. This is probably because certain recipes were more popular amongst chefs or food critics, meaning those recipes were more likely to receive a (higher) rating and review. When someone sees a recipe with positive ratings and reviews, they may be more inclined to try the recipe themselves, which results in significantly more people providing feedback for popular recipes, and therefore tagging recipes more often when the dish has a review(s) and a high rating.
 
