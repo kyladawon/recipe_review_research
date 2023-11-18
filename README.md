@@ -47,19 +47,23 @@ By taking these steps, we make our data more usable to answer our question.
 
 For our univariate analysis, we chose to plot the distribution of the number of tags per recipe by creating a box-and-whisker plot. We discovered the number of tags per recipe were usually between 11 (the first quartile) and 21 (the third quartile). The median, 16, is a measure of central tendency that is not strongly affected by outliers. Since the mean, about 16.29, is pretty close to 16, we can say that the distribution of tags is approximately symmetric. This means that approximately half of our distribution has a number of tags that is less than 16 and half has a number of tags that is greater than 16.
 
+Therefore, we observe generally consistent user behavior across the recipes when it comes to tagging.
+
 <iframe src="assets/univariate_plot2.html" width=600 height=450 frameBorder=0></iframe>
 
-The above is another univariate analysis we conducted, where we chose to plot the distribution of the number of reviews per recipe by creating a box-and-whisker plot. We discovered the number of reviews per recipe were usually between 1 (the first quartile) and 3 (the third quartile). The median, 2, is a measure of central tendency that is not strongly affected by outliers. Since the mean is about 2.797, it means that the plot is slightly skewed to the left.
+The above is another univariate analysis we conducted, where we chose to plot the distribution of the number of reviews per recipe by creating a box-and-whisker plot. We discovered the number of reviews per recipe were usually between 1 (the first quartile) and 3 (the third quartile). The median, 2, is a measure of central tendency that is not strongly affected by outliers. Since the mean is about 2.797, it means that the plot is slightly skewed to the right.
+
+Because our code is right-skewed, we can infer that the majority of the recipes have a small number of reviews. Similarly, very few recipes have a large number of reviews. Some possible reasons for this are that users particularly enjoyed some recipes due to their taste, uniqueness, or presentation. It is also possible that influencers posted photos of themselves with certain dishes, thus unintentionally promoting recipes, making them more likely to be tried and reviewed.
 
 ### Bivariate Analysis
 
 <iframe src="assets/bivariate_plot1.html" width=600 height=450 frameBorder=0></iframe>
 
-For bivariate analysis, we created scatter plot with the number of tags on x-axis and the number of reviews on y-axis to see their relationships. The overall scatter plot looks like a bell curve. The middle of the bell curve shaped scatter plot seems to have higher scatter density with more data points. Moreover, the data point with high number of review counts seem to be outliers since they are apart from clusters.
+For the bivariate analysis, we created a scatter plot with the number of tags on the x-axis and the number of reviews on the y-axis to see their relationship. The overall scatter plot has a concentration of points in the center. Since there is not a clear trend between the number of tags and the number of reviews, the scatterplot tells us there is no linear correlation between these two variables. Moreover, the data points with high number of review counts seem to be outliers since they are apart from clusters.
 
 <iframe src="assets/bivariate_plot2.html" width=600 height=450 frameBorder=0></iframe>
 
-We also created different scatter plot with the number of steps on x-axis and the number of reviews on y-axis to see their relationships. The overall scatter plot is positively skewed and the data points are densely packed in the area where it represents less number of steps, which means that the recipe with more less steps have more reviews compared to the recipe with more steps.
+We also created a different scatter plot with the number of steps on the x-axis and the number of reviews on the y-axis to see their relationships. The overall scatter plot is positively skewed and the data points are densely packed in the area that represents fewer number of steps, which means that the recipe with more less steps typically have more reviews compared to the recipe with more steps.
 
 ### Interesting Aggregates
 
