@@ -26,7 +26,7 @@ This question intrigues us because in order for businesses to do well, they need
 ### Data Cleaning
 
 ```py
-print(final_merged.head().to_markdown(index=False))
+print(final_merged.head().to_markdown())
 ```
 
 For the data cleaning, we performed a left merge between the 'interactions' and 'recipes' DataFrame. Then, we filled in all zeroes in the 'Rating' column with np.NaN since it does not make sense for a recipe to receive a rating of 0; in this context, ratings can only be on a scale from 1 to 5. Therefore, a recipe receiving a rating of 0 probably just means that a rating was not received for that particular recipe.
