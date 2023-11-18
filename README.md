@@ -132,11 +132,7 @@ Since our p-value is **0.02** < 0.05 (our significance level threshold), we reje
 
 ### Hypothesis Testing
 
-<<<<<<< HEAD
-- **Null Hypothesis:** Recipes were randomly selected and reviewed by people
-=======
 - **Null Hypothesis:** Recipes were randomly selected and reviewed by people.
->>>>>>> 377f630c2570d80146311e32d9219c4644fd4605
 
 - **Alternative Hypothesis:** The selection and review of recipes were influenced by the recipe ratings rather than occurring randomly.
 
@@ -147,9 +143,6 @@ Since our p-value is **0.02** < 0.05 (our significance level threshold), we reje
 - **P-Value:** 0.354
 
 Since **0.354** is greater than the significance level (0.05), we fail to reject the null hypothesis, which means that there is no sufficient evidence to prove that people review the recipes based on the ratings and therefore the null hypothesis cannot be rejected.
-<<<<<<< HEAD
-This test helps us answer our question since we can exclude rating column from the options of the columns that affects the number of reviews the most.
-=======
 
 This test helps us answer our question since we can exclude rating column from the options of the columns that affects the number of reviews the most.
->>>>>>> 377f630c2570d80146311e32d9219c4644fd4605
+
