@@ -69,13 +69,13 @@ strongly affected by outliers. Since the mean, about 16.29, is pretty close to
 16, we can say that the distribution of tags is approximately symmetric. This
 means that approximately half of our distribution has a number of tags that is
 less than 16 and half has a number of tags that is greater than 16. 
-<iframe src="assets/univariate_plot2.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/univariate_plot2.html" width=600 height=450 frameBorder=0></iframe>
 
 ### Bivariate Analysis
 
-<iframe src="assets/bivariate_plot1.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/bivariate_plot1.html" width=600 height=450 frameBorder=0></iframe>
 
-<iframe src="assets/bivariate_plot2.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/bivariate_plot2.html" width=600 height=450 frameBorder=0></iframe>
 
 ### Aseessment of Missingness
 #### NMAR Analysis
