@@ -59,7 +59,7 @@ By taking these steps, we make our data more usable to answer our question.
 
 ### Univariate Analysis
 
-<iframe src="assets/univariate_plot1.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/univariate_plot1.html" width=600 height=450 frameBorder=0></iframe>
 
 For our univariate analysis, we chose to plot the distribution of the number 
 of tags per recipe by creating a box-and-whisker plot. We discovered the number
