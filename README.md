@@ -5,7 +5,7 @@
 ---
 
 ### Introduction
-> **Introduction & Question Identification** 
+> ```Introduction & Question Identification```
 
 Our culinary experiences have become very intertwined with data over the years,
 whether it involves measuring the amount of an ingredient needed for
