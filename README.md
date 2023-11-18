@@ -77,7 +77,7 @@ less than 16 and half has a number of tags that is greater than 16.
 
 <iframe src="assets/bivariate_plot2.html" width=600 height=450 frameBorder=0></iframe>
 
-### Aseessment of Missingness
+### Assessment of Missingness
 #### NMAR Analysis
 We believe the reviews column could be not missing at random (NMAR) if people
 chose not to leave a review. This could be due to:
