@@ -4,7 +4,7 @@
 
 ---
 
-### Introduction
+### Introduction 
 
 Our culinary experiences have become very intertwined with data over the years, whether it involves measuring the amount of an ingredient needed for a recipe or ensuring you cooked a dish for the proper amount of time. We wanted to consider the impact of data on a business setting. In this project, we are considering a website where people post reviews to recipes.
 
