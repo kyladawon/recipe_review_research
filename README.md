@@ -11,13 +11,31 @@ Our culinary experiences have become very intertwined with data over the years, 
 We have access to two DataFrames:
 
 1. **Interactions**: This DataFrame (731,927 rows) describes how people
-   _interacted_ with each recipe. The columns included in this DataFrame are
-   the user_id, recipe_id, date, rating, and review (a series of reviews people gave for the recipes).
+   _interacted_ with each recipe. 
 2. **Recipes**: This DataFrame (83,782) contains important information about what is
-   included in the recipes and how to make them. Some examples of the columns
-   in this DataFrame include tags, nutrition, n_steps (the number of steps in
-   the recipe), steps (how to create the recipe), and n_ingredients (the number
-   of ingredients in the recipe).
+   included in the recipes and how to make them. 
+
+**Below are some columns we considered useful for our study:**
+
+From the ```recipes``` dataset:
+
+| Column   | Description                               |
+|----------|-------------------------------------------|
+| id       | ID of the recipe                          |
+| tags     | List of tags for the recipe               |
+| n_steps  | Number of steps in the recipe             |
+| steps    | List of steps to create the recipe        |
+
+From the ```interactions``` dataset:
+
+| Column     | Description                              |
+|------------|------------------------------------------|
+| user_id    | The ID of the reviewer                   |
+| recipe_id  | The ID of the recipe                     |
+| date       | The date the review was written          |
+| rating     | A numerical rating of the review (1 to 5)|
+| review     | A string of the review for the recipe    |
+
 
 Our goal is to determine an attribute that is most closely associated with the reviews columns. In other words, we are wondering whether the number of reviews for a particular recipe is influenced by a specific column more strongly than another.
 
