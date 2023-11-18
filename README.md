@@ -55,7 +55,7 @@ print(final_merged[['id','n_steps','user_id','rating','average_rating','tag_coun
 | 306168 | 6       | 1196280.0 | 5.0    | 5.0            | 10        | 4.0          |
 | 306168 | 6       | 768828.0  | 5.0    | 5.0            | 10        | 4.0          |
 
-For the data cleaning, we performed a left merge between the 'interactions' and 'recipes' DataFrame. Then, we filled in all zeroes in the 'Rating' column with np.NaN since it does not make sense for a recipe to receive a rating of 0; in this context, ratings can only be on a scale from 1 to 5. Therefore, a recipe receiving a rating of 0 probably just means that a rating was not received for that particular recipe.
+For the data cleaning, we performed a left merge between the ```interactions``` and ```recipes``` DataFrame. Then, we filled in all zeroes in the ```Rating``` column with ```np.NaN``` since it does not make sense for a recipe to receive a rating of 0; in this context, ratings can only be on a scale from 1 to 5. Therefore, a recipe receiving a rating of 0 probably just means that a rating was not received for that particular recipe.
 
 Next, we considered what columns to add for our DataFrame. Since we are inspecting
 the impact of other columns on reviews, we decided to make a column to make
@@ -106,6 +106,7 @@ print(intesting_agg_pivot_table.to_markdown(index=False))
 | 3.0    | 4.0          | 17        |
 | 5.0    | 100.0        | 10        |
 | 5.0    | 1.0          | 24        |
+
 We decided to take a closer look at how the ratings, number of reviews, and number of tags vary for each recipe.
 - The mean of the ratings is about 4.626, and the median is 5.0, which means that most recipes received a fairly high rating.
 - The median of the review count is 4, which means that most recipes did not receive that many reviews. From our pivot table, we can see that one recipe received 100 reviews, which means it is a clear outlier. The review counts column must have a large variation.
