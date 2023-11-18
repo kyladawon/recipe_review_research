@@ -59,7 +59,7 @@ By taking these steps, we make our data more usable to answer our question.
 
 ### Univariate Analysis
 
-<iframe src="assets/univariate_plot1.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/univariate_plot1.html" width=600 height=450 frameBorder=0></iframe>
 
 For our univariate analysis, we chose to plot the distribution of the number
 of tags per recipe by creating a box-and-whisker plot. We discovered the number
@@ -72,11 +72,37 @@ less than 16 and half has a number of tags that is greater than 16.
 
 <iframe src="assets/univariate_plot2.html" width=600 height=450 frameBorder=0></iframe>
 
+The above is another univariate analysis we conducted, where we chose to plot the distribution of the number of reviews per recipe by creating a box-and-whisker plot. We discovered the number of reviews per recipe were usually between 1 (the first quartile) and 3 (the third quartile). The median, 2, is a measure of central tendency that is not strongly affected by outliers. Since the mean is about 2.797, it means that the plot is slightly skewed to the left.
+
 ### Bivariate Analysis
 
 <iframe src="assets/bivariate_plot1.html" width=600 height=450 frameBorder=0></iframe>
 
+For bivariate analysis, we created scatter plot with the number of tags on x-axis and the number of reviews on y-axis to see their relationships. The overall scatter plot looks like a bell curve. The middle of the bell curve shaped scatter plot seems to have higher scatter density with more data points. Moreover, the data point with high number of review counts seem to be outliers since they are apart from clusters.
+
 <iframe src="assets/bivariate_plot2.html" width=600 height=450 frameBorder=0></iframe>
+
+We also created different scatter plot with the number of steps on x-axis and the number of reviews on y-axis to see their relationships. The overall scatter plot is positively skewed and the data points are densely packed in the area where it represents less number of steps, which means that the recipe with more less steps have more reviews compared to the recipe with more steps.
+
+### Interesting Aggregates
+
+We decided to take a closer look at which columns impact the missingness of reviews
+in the "reviews" column by creating a pivot table, where we grouped the data
+by the rating (from 1 to 5) and set the values to be the sum of the tag_count
+per recipe.
+
+<< embed chart here >>
+
+It seems as though recipes with a higher rating generally have
+more tags, whether a review is missing or not. However, we also noticed
+that recipes where the reviews were not missing also had significantly
+more tags than recipes with missing reviews. This is probably because
+certain recipes were more popular amongst chefs or food critics, meaning
+those recipes were more likely to receive a (higher) rating and review.
+When someone sees a recipe with positive ratings and reviews, they may be
+more inclined to try the recipe themselves, which results in significantly
+more people providing feedback for popular recipes, and therefore tagging
+recipes more often when the dish has a review(s) and a high rating.
 
 ### Aseessment of Missingness
 
@@ -107,7 +133,7 @@ missing compared to when it is not missing. Our observed statistic is a KS
 statistic comparing the tag counts and reviews per recipe for each
 distribution mentioned.
 
-<< embed graph here >>
+<iframe src="assets/missing_depend_tag.html" width=600 height=450 frameBorder=0></iframe>
 
 We used a KS statistic since the shape of the
 distribution when the reviews are vs. are not missing are notably different.
@@ -130,7 +156,7 @@ when the reviews are missing compared to when it is not missing. Our
 observed statistic is a KS statistic comparing the number of steps and
 reviews per recipe for each distribution mentioned.
 
-< embed graph 2 here >
+<iframe src="assets/missing_depend_nstep.html" width=600 height=450 frameBorder=0></iframe>
 
 We used a KS statistic
 since the shape of the distribution when the reviews are vs. are not
@@ -146,23 +172,3 @@ that the reviews are more likely to be missing when there are more steps
 in a recipe, less people are likely to follow the recipe since the dish
 will take more time to make and read, causing less people to ultimately
 leave a review.
-
-### Interesting Aggregates
-
-We decided to take a closer look at which columns impact the missingness of reviews
-in the "reviews" column by creating a pivot table, where we grouped the data
-by the rating (from 1 to 5) and set the values to be the sum of the tag_count
-per recipe.
-
-<< embed chart here >>
-
-It seems as though recipes with a higher rating generally have
-more tags, whether a review is missing or not. However, we also noticed
-that recipes where the reviews were not missing also had significantly
-more tags than recipes with missing reviews. This is probably because
-certain recipes were more popular amongst chefs or food critics, meaning
-those recipes were more likely to receive a (higher) rating and review.
-When someone sees a recipe with positive ratings and reviews, they may be
-more inclined to try the recipe themselves, which results in significantly
-more people providing feedback for popular recipes, and therefore tagging
-recipes more often when the dish has a review(s) and a high rating.
