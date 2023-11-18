@@ -5,7 +5,6 @@
 ---
 
 ### Introduction
-> ```Introduction & Question Identification```
 
 Our culinary experiences have become very intertwined with data over the years,
 whether it involves measuring the amount of an ingredient needed for
@@ -79,7 +78,24 @@ less than 16 and half has a number of tags that is greater than 16.
 <iframe src="assets/bivariate_plot2.html" width=800 height=600 frameBorder=0></iframe>
 
 ### Aseessment of Missingness
-> **Missingness Dependency**
+#### NMAR Analysis
+We believe the reviews column could be not missing at random (NMAR) if people
+chose not to leave a review. This could be due to:
+- **lack of time:** People may not have the time to write a review; additional
+  columns we could study to investigate the lack of time include number of 
+   hours worked a day, spent at school, or spent in extracurriculars.
+- **assumed unimportance:** People may not consider leaving a review to be 
+   important. Additional information we could gather is how people would
+   rate the importance of answering surveys, but this information is also
+   pretty useless, considering people who do not want to take the time to 
+   leave a review probably also would not take the time to answer an extra question.
+- **privacy concerns:** People may have privacy concerns and may not feel comfortable
+  sharing their thoughts online. Similar to the last bullet point, we could
+  obtain information where people rank how much they value privacy, but those
+  who care a lot about privacy may just avoid the question. 
+
+
+#### Missingness Dependency
 
 Our null hypothesis is that the distribution of the tag count per recipe is 
 the same whether or not the reviews are missing. Our alternative hypothesis 
@@ -101,7 +117,33 @@ fail to reject the null hypothesis, so the missingness of our data is
 correlation* with the distribution of tag counts per recipe.
 
 We want to determine if there's a column that *does* affect the missingness 
-of the reviews. We decided to 
+of the reviews. We decided to investigate whether the missingness of the reviews
+depends on the number of steps in a recipe.
+
+
+Our new null hypothesis is that the distribution of the number of steps per 
+recipe is the same whether or not the reviews are missing. Our alternative 
+hypothesis is that the distribution of the number of steps is different 
+when the reviews are missing compared to when it is not missing. Our 
+observed statistic is a KS statistic comparing the number of steps and 
+reviews per recipe for each distribution mentioned. 
+
+< embed graph 2 here >
+
+We used a KS statistic
+since the shape of the distribution when the reviews are vs. are not 
+missing are notably different. When the reviews are missing, the 
+distribution is fairly uniform, whereas when the reviews are not missing,
+the distribution appears generally normal. 
+
+Since our p-value is **0.02** < 
+0.05 (our significance level threshold), we reject the null hypothesis, 
+so the missingness of our data is **missing at random (MAR)**. The missingness
+of the reviews depends on the n-steps. A plausible explanation for this is
+that the reviews are more likely to be missing when there are more steps 
+in a recipe, less people are likely to follow the recipe since the dish 
+will take more time to make and read, causing less people to ultimately 
+leave a review.
 
 
 
@@ -110,7 +152,11 @@ of the reviews. We decided to
 We decided to take a closer look at which columns impact the missingness of reviews 
 in the "reviews" column by creating a pivot table, where we grouped the data
 by the rating (from 1 to 5) and set the values to be the sum of the tag_count
-per recipe. It seems as though recipes with a higher rating generally have 
+per recipe. 
+
+<< embed chart here >>
+
+It seems as though recipes with a higher rating generally have 
 more tags, whether a review is missing or not. However, we also noticed 
 that recipes where the reviews were not missing also had significantly 
 more tags than recipes with missing reviews. This is probably because 
