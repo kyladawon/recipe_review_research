@@ -117,3 +117,7 @@ Since our p-value is **0.02** < 0.05 (our significance level threshold), we reje
 **Test Statistic:** The proportion of means of ratings to the number of reviews
 **Significance Level:** 0.05
 **P-Value:** 0.354
+
+Since p-value is greater than significance level, we fail to reject the null hypothesis, which means that there is no sufficient evidence to prove that people try and review the recipes based on the ratings and therefore the null hypothesis cannot be rejected.
+
+These choices are good choices for answering our question since we can exclude rating column from the options of the columns that affects the number of reviews the most.
