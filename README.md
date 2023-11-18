@@ -26,16 +26,16 @@ This question intrigues us because in order for businesses to do well, they need
 ### Data Cleaning
 
 ```py
-print(final_merged[['id','minutes','n_steps','n_ingredients','user_id','rating','average_rating','tag_count','review_count']].head().to_markdown())
+print(final_merged[['id','n_steps','user_id','rating','average_rating','tag_count','review_count']].head().to_markdown())
 ```
 
-| id     | minutes | n_steps | n_ingredient | user_id   | rating | average_rating | tag_count | review_count |
-| ------ | ------- | ------- | ------------ | --------- | ------ | -------------- | --------- | ------------ |
-| 333281 | 40.0    | 10      | 9            | 386585.0  | 4.0    | 4.0            | 14        | 1.0          |
-| 453467 | 45.0    | 12      | 11           | 424680.0  | 5.0    | 5.0            | 9         | 1.0          |
-| 306168 | 40.0    | 6       | 9            | 29782.0   | 5.0    | 5.0            | 10        | 4.0          |
-| 306168 | 40.0    | 6       | 9            | 1196280.0 | 5.0    | 5.0            | 10        | 4.0          |
-| 306168 | 40.0    | 6       | 9            | 768828.0  | 5.0    | 5.0            | 10        | 4.0          |
+| id     | n_steps | user_id   | rating | average_rating | tag_count | review_count |
+| ------ | ------- | --------- | ------ | -------------- | --------- | ------------ |
+| 333281 | 10      | 386585.0  | 4.0    | 4.0            | 14        | 1.0          |
+| 453467 | 12      | 424680.0  | 5.0    | 5.0            | 9         | 1.0          |
+| 306168 | 6       | 29782.0   | 5.0    | 5.0            | 10        | 4.0          |
+| 306168 | 6       | 1196280.0 | 5.0    | 5.0            | 10        | 4.0          |
+| 306168 | 6       | 768828.0  | 5.0    | 5.0            | 10        | 4.0          |
 
 For the data cleaning, we performed a left merge between the 'interactions' and 'recipes' DataFrame. Then, we filled in all zeroes in the 'Rating' column with np.NaN since it does not make sense for a recipe to receive a rating of 0; in this context, ratings can only be on a scale from 1 to 5. Therefore, a recipe receiving a rating of 0 probably just means that a rating was not received for that particular recipe.
 
@@ -145,4 +145,7 @@ Since our p-value is **0.02** < 0.05 (our significance level threshold), we reje
 Since **0.354** is greater than the significance level (0.05), we fail to reject the null hypothesis, which means that there is no sufficient evidence to prove that people review the recipes based on the ratings and therefore the null hypothesis cannot be rejected.
 
 This test helps us answer our question since we can exclude rating column from the options of the columns that affects the number of reviews the most.
+<<<<<<< HEAD
 
+=======
+>>>>>>> 03bc0ad89f24a996f32e3791820c5efc0032316b
