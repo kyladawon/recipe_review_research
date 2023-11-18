@@ -53,8 +53,6 @@ We also created different scatter plot with the number of steps on x-axis and th
 
 We decided to take a closer look at which columns impact the missingness of reviews in the "reviews" column by creating a pivot table, where we grouped the data by the rating (from 1 to 5) and set the values to be the sum of the tag_count per recipe.
 
-print(intesting_agg_pivot_table.to_markdown(index=False))
-
 It seems as though recipes with a higher rating generally have
 more tags, whether a review is missing or not. However, we also noticed
 that recipes where the reviews were not missing also had significantly
