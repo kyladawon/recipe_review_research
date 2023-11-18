@@ -65,7 +65,9 @@ We also created different scatter plot with the number of steps on x-axis and th
 
 We decided to take a closer look at which columns impact the missingness of reviews in the "reviews" column by creating a pivot table, where we grouped the data by the rating (from 1 to 5) and set the values to be the sum of the tag_count per recipe.
 
+```py
 print(intesting_agg_pivot_table.to_markdown(index=False))
+```
 
 It seems as though recipes with a higher rating generally have more tags, whether a review is missing or not. However, we also noticed that recipes where the reviews were not missing also had significantly more tags than recipes with missing reviews. This is probably because certain recipes were more popular amongst chefs or food critics, meaning those recipes were more likely to receive a (higher) rating and review. When someone sees a recipe with positive ratings and reviews, they may be more inclined to try the recipe themselves, which results in significantly more people providing feedback for popular recipes, and therefore tagging recipes more often when the dish has a review(s) and a high rating.
 
@@ -108,6 +110,10 @@ We used a KS statistic since the shape of the distribution when the reviews are 
 
 Since our p-value is **0.02** < 0.05 (our significance level threshold), we reject the null hypothesis, so the missingness of our data is **missing at random (MAR)**. The missingness of the reviews depends on the n-steps. A plausible explanation for this is that the reviews are more likely to be missing when there are more steps in a recipe, less people are likely to follow the recipe since the dish will take more time to make and read, causing less people to ultimately leave a review.
 
-```
+### Hypothesis Testing
 
-```
+**Null Hypothesis:** Recipes were selected and reviewed by people at random.
+**Alternative Hypothesis:** Recipes were not selected and reviewed by people at random but based on the ratings of the recipe.
+**Test Statistic:** The proportion of means of ratings to the number of reviews
+**Significance Level:** 0.05
+**P-Value:** 0.354
