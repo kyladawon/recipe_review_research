@@ -1,5 +1,10 @@
 remote_theme: pages-themes/time-machine@v0.2.0
 plugins:
-  - jekyll-remote-theme
-title: Recipe Review Research
-description: by Kyla Park and Heidi Tam
+<<<<<<< HEAD
+- jekyll-remote-theme
+title: Investigating Recipe Reviews
+description: By Heidi Tam and Kyla Park
+=======
+- jekyll-remote-theme 
+title: Investigating Recipe Reviews
+>>>>>>> 758482e32c0348de32c84e55d4c43388aee4644e
