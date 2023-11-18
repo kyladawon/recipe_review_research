@@ -73,6 +73,14 @@ We decided to take a closer look at which columns impact the missingness of revi
 print(intesting_agg_pivot_table.to_markdown(index=False))
 ```
 
+| rating | review_count | tag_count |
+| ------ | ------------ | --------- |
+| 3.0    | 9.0          | 15        |
+| 3.0    | 1.0          | 9         |
+| 3.0    | 4.0          | 17        |
+| 5.0    | 100.0        | 10        |
+| 5.0    | 1.0          | 24        |
+
 It seems as though recipes with a higher rating generally have more tags, whether a review is missing or not. However, we also noticed that recipes where the reviews were not missing also had significantly more tags than recipes with missing reviews. This is probably because certain recipes were more popular amongst chefs or food critics, meaning those recipes were more likely to receive a (higher) rating and review. When someone sees a recipe with positive ratings and reviews, they may be more inclined to try the recipe themselves, which results in significantly more people providing feedback for popular recipes, and therefore tagging recipes more often when the dish has a review(s) and a high rating.
 
 ### Assessment of Missingness
