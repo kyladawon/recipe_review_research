@@ -29,6 +29,12 @@ This question intrigues us because in order for businesses to do well, they need
 print(final_merged[['id','minutes','n_steps','n_ingredients','user_id','rating','average_rating','tag_count','review_count']].head().to_markdown())
 ```
 
+<style>
+table {
+    width: 50%; /* Adjust the width as needed */
+}
+</style>
+
 | id     | minutes | n_steps | n_ingredient | user_id   | rating | average_rating | tag_count | review_count |
 | ------ | ------- | ------- | ------------ | --------- | ------ | -------------- | --------- | ------------ |
 | 333281 | 40.0    | 10      | 9            | 386585.0  | 4.0    | 4.0            | 14        | 1.0          |
