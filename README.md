@@ -145,7 +145,3 @@ Since our p-value is **0.02** < 0.05 (our significance level threshold), we reje
 Since **0.354** is greater than the significance level (0.05), we fail to reject the null hypothesis, which means that there is no sufficient evidence to prove that people review the recipes based on the ratings and therefore the null hypothesis cannot be rejected.
 
 This test helps us answer our question since we can exclude rating column from the options of the columns that affects the number of reviews the most.
-<<<<<<< HEAD
-
-=======
->>>>>>> 03bc0ad89f24a996f32e3791820c5efc0032316b
