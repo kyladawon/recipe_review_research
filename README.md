@@ -26,8 +26,16 @@ This question intrigues us because in order for businesses to do well, they need
 ### Data Cleaning
 
 ```py
-print(final_merged.head().to_markdown())
+print(final_merged[['id','minutes','n_steps','n_ingredients','user_id','rating','average_rating','tag_count','review_count']].head().to_markdown())
 ```
+
+| id     | minutes | n_steps | n_ingredient | user_id   | rating | average_rating | tag_count | review_count |
+| ------ | ------- | ------- | ------------ | --------- | ------ | -------------- | --------- | ------------ |
+| 333281 | 40.0    | 10      | 9            | 386585.0  | 4.0    | 4.0            | 14        | 1.0          |
+| 453467 | 45.0    | 12      | 11           | 424680.0  | 5.0    | 5.0            | 9         | 1.0          |
+| 306168 | 40.0    | 6       | 9            | 29782.0   | 5.0    | 5.0            | 10        | 4.0          |
+| 306168 | 40.0    | 6       | 9            | 1196280.0 | 5.0    | 5.0            | 10        | 4.0          |
+| 306168 | 40.0    | 6       | 9            | 768828.0  | 5.0    | 5.0            | 10        | 4.0          |
 
 For the data cleaning, we performed a left merge between the 'interactions' and 'recipes' DataFrame. Then, we filled in all zeroes in the 'Rating' column with np.NaN since it does not make sense for a recipe to receive a rating of 0; in this context, ratings can only be on a scale from 1 to 5. Therefore, a recipe receiving a rating of 0 probably just means that a rating was not received for that particular recipe.
 
@@ -124,7 +132,11 @@ Since our p-value is **0.02** < 0.05 (our significance level threshold), we reje
 
 ### Hypothesis Testing
 
+<<<<<<< HEAD
 - **Null Hypothesis:** Recipes were randomly selected and reviewed by people
+=======
+- **Null Hypothesis:** Recipes were randomly selected and reviewed by people.
+>>>>>>> 377f630c2570d80146311e32d9219c4644fd4605
 
 - **Alternative Hypothesis:** The selection and review of recipes were influenced by the recipe ratings rather than occurring randomly.
 
@@ -135,4 +147,9 @@ Since our p-value is **0.02** < 0.05 (our significance level threshold), we reje
 - **P-Value:** 0.354
 
 Since **0.354** is greater than the significance level (0.05), we fail to reject the null hypothesis, which means that there is no sufficient evidence to prove that people review the recipes based on the ratings and therefore the null hypothesis cannot be rejected.
+<<<<<<< HEAD
 This test helps us answer our question since we can exclude rating column from the options of the columns that affects the number of reviews the most.
+=======
+
+This test helps us answer our question since we can exclude rating column from the options of the columns that affects the number of reviews the most.
+>>>>>>> 377f630c2570d80146311e32d9219c4644fd4605
