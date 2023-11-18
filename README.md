@@ -76,3 +76,27 @@ less than 16 and half has a number of tags that is greater than 16.
 <iframe src="assets/bivariate_plot1.html" width=800 height=600 frameBorder=0></iframe>
 
 <iframe src="assets/bivariate_plot2.html" width=800 height=600 frameBorder=0></iframe>
+
+### Aseessment of Missingness
+Our null hypothesis is that the distribution of the tag count per recipe is 
+the same whether or not the reviews are missing. Our alternative hypothesis 
+is that the distribution of the tag count is different when the reviews are
+missing compared to when it is not missing. Our observed statistic is a KS 
+statistic comparing the tag counts and reviews per recipe for each 
+distribution mentioned. We used a KS statistic since the shape of the distribution when the reviews are vs. are not missing are notably different. When the reviews are missing, the distribution is fairly uniform, whereas when the reviews are not missing, the distribution appears generally normal. Since our p-value is 0.245 > 0.05 (our significance level threshold), we fail to reject the null hypothesis, so the missingness of our data is missing completely at random (MCAR). The missingness of the reviews has no correlation with the distribution of tag counts per recipe.
+
+### Interesting Aggregates
+
+We decided to take a closer look at which columns impact the missingness of reviews 
+in the "reviews" column by creating a pivot table, where we grouped the data
+by the rating (from 1 to 5) and set the values to be the sum of the tag_count
+per recipe. It seems as though recipes with a higher rating generally have 
+more tags, whether a review is missing or not. However, we also noticed 
+that recipes where the reviews were not missing also had significantly 
+more tags than recipes with missing reviews. This is probably because 
+certain recipes were more popular amongst chefs or food critics, meaning 
+those recipes were more likely to receive a (higher) rating and review. 
+When someone sees a recipe with positive ratings and reviews, they may be 
+more inclined to try the recipe themselves, which results in significantly 
+more people providing feedback for popular recipes, and therefore tagging 
+recipes more often when the dish has a review(s) and a high rating.
