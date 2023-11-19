@@ -117,15 +117,15 @@ We decided to take a closer look at how the ratings, number of reviews, and numb
 
 We believe the reviews column could be not missing at random (NMAR) if people chose not to leave a review. This could be due to:
 
-- **lack of time:** People may not have the time to write a review; additional
+- **Lack of Time:** People may not have the time to write a review; additional
   columns we could study to investigate the lack of time include number of
   hours worked a day, spent at school, or spent in extracurriculars.
-- **assumed unimportance:** People may not consider leaving a review to be
+- **Assumed Unimportance:** People may not consider leaving a review to be
   important. Additional information we could gather is how people would
   rate the importance of answering surveys, but this information is also
   pretty useless, considering people who do not want to take the time to
   leave a review probably also would not take the time to answer an extra question.
-- **privacy concerns:** People may have privacy concerns and may not feel comfortable
+- **Privacy Concerns:** People may have privacy concerns and may not feel comfortable
   sharing their thoughts online. Similar to the last bullet point, we could
   obtain information where people rank how much they value privacy, but those
   who care a lot about privacy may just avoid the question.
